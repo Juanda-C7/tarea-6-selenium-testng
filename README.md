@@ -1,6 +1,6 @@
 <div align="center">
 
-<h1>Tarea 3: Selenium y TestNG, de Maven a Gradle</h1>
+<h1>Tarea 6: Selenium y TestNG, de Maven a Gradle</h1>
 
 Pruebas de navegador contra <a href="https://www.saucedemo.com">saucedemo.com</a> con Selenium WebDriver, TestNG y Page Objects.<br>
 El proyecto se construye con Maven, y la tarea es pasarlo a Gradle.
