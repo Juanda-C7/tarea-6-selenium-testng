@@ -1,0 +1,17 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="saucedemo" parallel="classes" thread-count="2">
+  <parameter name="browser" value="chrome"/>
+
+  <test name="web">
+    <groups>
+      <run>
+        <include name="smoke"/>
+        <include name="regression"/>
+      </run>
+    </groups>
+    <classes>
+      <class name="edu.ufm.qa.tests.LoginTest"/>
+      <class name="edu.ufm.qa.tests.CartTest"/>
+    </classes>
+  </test>
+</suite>
