@@ -1,0 +1,35 @@
+
+plugins {
+    id 'java'
+}
+
+group = 'edu.ufm.qa'
+version = '1.0.0'
+
+repositories {
+    mavenCentral()
+}
+
+java {
+    toolchain {
+        languageVersion = JavaLanguageVersion.of(21)
+    }
+}
+
+dependencies {
+    testImplementation 'org.seleniumhq.selenium:selenium-java:4.50.0'
+    testImplementation 'org.testng:testng:7.12.0'
+}
+
+test {
+    useTestNG {
+        suites 'testng.xml'
+    }
+
+    systemProperty 'headless', 'false'
+
+    testLogging {
+        events 'passed', 'skipped', 'failed'
+        showStandardStreams = true
+    }
+}
